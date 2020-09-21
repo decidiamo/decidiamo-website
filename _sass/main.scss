@@ -1,76 +1,74 @@
 @charset "utf-8";
-
-// Customization
-
-// You can easily customize Bulma with your own variables.
-// Just uncomment the following block to see the result.
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 
-// 1. Import the initial variables
-@import "../node_modules/bulma/sass/utilities/initial-variables";
+// Update Bulma's global variables
+$family-serif: "Merriweather", serif;
+$family-primary: $family-serif;
+$primary: #0066CC;
+@import "../node_modules/bulma/bulma.sass";
 
-// 2. Set your own initial variables
-// Update the blue shade, used for links
-$blue: #06bcef;
-// Add pink and its invert
-// $pink: #ff8080;
-$pink: #ffeedd;
-$pink-invert: #fff;
-// Update the sans-serif font family
-$family-sans-serif: "Ubuntu", "Arial", sans-serif;
-$family-serif: "Times", serif;
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $black;
-
-// 4. Import the rest of Bulma
-
-
-@import "../node_modules/bulma/bulma";
-
-.hero-head {
-	padding-top: 2em;
-}
-.hero-foot {
-	padding: 1em;
+h1.decidiamo {
+	font-weight: 900;
+	font-family: Montserrat, sans-serif;
+	font-size: 8rem;
+	@extend .is-size-1-touch;
 }
 
-// full width iframes
-.embed-responsive {
-    position: relative;
-    padding-bottom: 56.25%; // 16x9
-	// padding-top: 30px;
-	height: 0;
-	overflow: hidden;
-	iframe,	object, embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
+.manifesto {
+	h1, h2, h3 {
+		@extend .has-text-centered;
+	  @extend .is-size-1-touch;
+		font-size: 4rem;
+		font-weight: 900;
+		text-shadow: 4px 4px 2px lightgray;
+		margin-top: 50px;
+		margin-bottom: 20px;
+		color: $primary;
 	}
 }
 
-h1, h2, h3 {
-//	text-align: center;
-	@extend .has-text-centered;
-}
 
-img {
-	height: auto;
-	width: auto;
-}
 p {
 	@extend .is-primary;
 	@extend .has-text-justified;
+	@extend .is-size-5-touch;
+	@extend .mb-3;
+	@extend .px-3;
+	font-size: 1.5rem;
+	line-height: 1.5;
 }
-// html { background-color: $green;}
-/* .embed-responsive-item { */
-/* 	width: 16em; */
-/* 	height: 9em; */
-/* } */
-/* .embed-responsive { */
-/* 	width: 16em; */
-/* 	height: 9em; */
-/* } */
+
+.footer {
+	@extend .has-background-dark;
+	@extend .has-text-light;
+	@extend .is-size-6;
+	strong {
+		@extend .has-text-light;
+	}
+}
+/*
+.is-shady {
+	animation: flyintoright .4s backwards;
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, .1) 0 1px 0;
+	border-radius: 4px;
+	display: inline-block;
+	margin: 10px;
+	position: relative;
+	transition: all .2s ease-in-out;
+}
+.is-shady:hover {
+	box-shadow: 0 10px 16px rgba(0, 0, 0, .13), 0 6px 6px rgba(0, 0, 0, .19);
+}
+
+.manifesto {
+	p {
+		@extend .is-shady;
+		&:hover {
+			@extend .is-shady:hover;
+		}
+	}
+}
+*/
