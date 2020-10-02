@@ -11,6 +11,7 @@ preview:
 	yarn run css-build
 	yarn run css-deploy
 	yarn run index-build
+	yarn run page-build
 	yarn run js-build
 	yarn run start
 
@@ -18,4 +19,5 @@ build:
 	yarn run css-build
 	yarn run css-deploy
 	yarn run index-build
+	yarn run page-build
 	yarn run js-build

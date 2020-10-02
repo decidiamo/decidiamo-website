@@ -36,8 +36,10 @@
     "js-watch": "npm run js-build -- --watch",
     "index-watch": "_shell/markdown-inline-tag -w views/index.html docs/index.html",
     "index-build": "_shell/markdown-inline-tag views/index.html docs/index.html",
+    "page-watch": "_shell/markdown-inline-tag -w views/comunicati.html docs/comunicati.html",
+    "page-build": "_shell/markdown-inline-tag views/comunicati.html docs/comunicati.html",
     "preview": "watch-http-server ./docs -o",
-    "start": "npm-run-all index-build css-build --parallel css-watch js-watch index-watch preview"
+    "start": "npm-run-all --parallel css-watch js-watch index-watch page-watch preview"
   },
   "dependencies": {}
 }
