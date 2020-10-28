@@ -1,0 +1,49 @@
+<!doctype html>
+{{> header}}
+<body>
+  {{> navbar}}
+  {{> hero}}
+  <div class="container manifesto">
+    <div class="section">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <h1>News</h1>
+        </div>
+      </div>
+      <div class="row columns is-multiline">
+        {{#articles}}
+        <div class="column is-4">
+          <div class="card large">
+            <div class="card-image">
+              <a href={{url}} target="_blank">
+                <figure class="image is-16by9">
+                  <img src={{image}} alt="Image">
+                </figure>
+              </a>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <a href={{url}} target="_blank">
+                    <p class="subtitle is-6">{{author}} &mdash; {{publisher}}</p>
+                    <br/>
+                    <p class="title is-4 no-padding">{{title}}</p>
+                  </a>
+                </div>
+              </div>
+              <div class="content">
+                {{description}}
+                <br/>
+                <a href={{url}} target="_blank"> &rarr; continua</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{/articles}}
+      </div>
+    </div>
+  </div>
+
+  {{> footer}}
+  </body>
+</html>

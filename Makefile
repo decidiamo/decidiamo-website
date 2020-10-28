@@ -10,6 +10,7 @@ install:
 preview:
 	yarn run css-build
 	yarn run css-deploy
+	yarn run template
 	yarn run index-build
 	yarn run page-build
 	yarn run js-build
@@ -18,6 +19,7 @@ preview:
 build:
 	yarn run css-build
 	yarn run css-deploy
+	yarn run template
 	yarn run index-build
 	yarn run page-build
 	yarn run js-build
